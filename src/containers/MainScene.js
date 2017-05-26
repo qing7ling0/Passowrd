@@ -244,7 +244,7 @@ class MainScene extends BaseComponent{
         {header}
         <SectionList
           enableVirtualization={true}
-          onRefresh={() => alert('onRefresh: nothing to refresh :P')}
+          onRefresh={() => {}}
           onViewableItemsChanged={this._onViewableItemsChanged.bind(this)}
           refreshing={false}
           renderItem={this._renderRow.bind(this)}
