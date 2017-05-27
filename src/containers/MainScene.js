@@ -123,15 +123,16 @@ class MainScene extends BaseComponent{
     return (
       <View style={styles.HeaderContainer}>
         <Text style={styles.HeaderTitle}>PASSWORD</Text>
-        <Button style={styles.HeaderAccountAdd}
+
+        <Button style={styles.HeaderRightContainer}
           onPress={()=> this.setState({
             modalVisible: true,
           })}
         >
           <Icon
+            style={styles.HeaderAccountAdd}
             name='user-plus' 
-            color='#fff'
-            size={30}  />
+            color='#fff' />
         </Button>
       </View>
     );
@@ -441,17 +442,24 @@ const styles = StyleCreater((baseStyle) => {
       color: 'white',
       fontWeight: '700'
     },
-    HeaderAccountAdd: {
+    HeaderRightContainer: {
       position: 'absolute',
-      right: Device.px2RN(15),
-      top: Device.px2RN(10)
+      right:0,
+      bottom:0,
+      width: Device.px2RN(100),
+      height:Device.px2RN(100),
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    HeaderAccountAdd: {
+      fontSize: Device.px2RN(50)
     },
     SectionTitleContainer: {
       ...baseStyle.ContainerRow,
       width: Device.size.width,
       height: Device.px2RN(80),
       alignItems: 'center',
-      backgroundColor: '#cc3399cc'
+      backgroundColor: '#cc3399'
     },
     SectionTitleText: {
       fontSize: Device.fontSize2RN(40),
@@ -519,6 +527,7 @@ const styles = StyleCreater((baseStyle) => {
       width: Device.px2RN(280),
       height:Device.px2RN(50),
       fontSize: Device.fontSize2RN(30),
+      alignSelf: 'flex-end',
       padding:0,
       paddingLeft: Device.px2RN(5),
       paddingRight: Device.px2RN(5),

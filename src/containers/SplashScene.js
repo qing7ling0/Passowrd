@@ -34,6 +34,7 @@ export default class SplashScene extends BaseComponent{
             style={{
               left: this.state.movePos,
               fontSize: Device.px2RN(60),
+              backgroundColor:'transparent',
               fontWeight: '900',
               color:'#fff'
             }}
